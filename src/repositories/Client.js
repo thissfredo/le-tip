@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const baseDomain = process.env.VUE_APP_API_URL;
-const baseURL = `${baseDomain}/json/last/`; 
+const baseURL = `${baseDomain}/json/last/`;
 
 const instance = axios.create({
   baseURL,
@@ -31,7 +31,5 @@ instance.interceptors.response.use((response) => {
   }
   return Promise.reject(error);
 });
-
-
 
 export default instance;

@@ -1,3 +1,12 @@
+:root {
+  --primary-color: #4ecb9f;
+  --secondary-color: #2c3e50;
+  --font-size-small: 14px;
+  --font-size-medium: 18px;
+  --font-size-large: 20px;
+  --border-radius: 100%;
+}
+
 html,
 body,
 #app {
@@ -13,4 +22,5 @@ body,
   text-align: center;
   color: #2c3e50;
   font-size: 14px;
+  background-color: var(--primary-color);
 }
