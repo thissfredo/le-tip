@@ -53,7 +53,6 @@
         </div>
 
         <!-- Resultados -->
-        <transition name="fade-slide">
           <div class="tip-calculator__results" :class="{ 'tip-calculator__results--hidden': isMobile && !panel }">
             <div>
               <span class="tip-calculator__result-name">Conta</span>
@@ -76,7 +75,6 @@
               <div class="tip-calculator__result-total">{{ `${quoteCurrencySymbol} ${valueToBRL}` }}</div>
             </div>
           </div>
-        </transition>
       </div>
       <div class="tip-calculator__button-container">
         <button class="tip-calculator__button" v-if="isMobile" @click="handlePanel">
@@ -229,67 +227,6 @@ export default {
   width: 200px;
 }
 
-.tip-calculator__tip-name,
-.tip-calculator__people-name {
-  font-size: var(--font-size-small);
-}
-
-.tip-calculator__tip-value,
-.tip-calculator__people-value {
-  font-size: var(--font-size-large);
-}
-
-
-.tip-tip-calculator__name-left,
-.tip-tip-calculator__name-right {
-  font-size: var(--font-size-small);
-}
-
-.tip-calculator__title h1 {
-  color: var(--secondary-color);
-  overflow: hidden;
-  font-size: 40px;
-  border-right: .15em solid var(--secondary-color);
-  white-space: nowrap;
-  margin: 0 auto;
-  top: 20px;
-  letter-spacing: .15em;
-  animation:
-    typing 1.5s steps(30, end),
-    blink-caret .5s step-end infinite;
-}
-
-@keyframes typing {
-  from {
-    width: 0
-  }
-
-  to {
-    width: 100%
-  }
-}
-
-@keyframes blink-caret {
-
-  from,
-  to {
-    border-color: transparent
-  }
-
-  50% {
-    border-color: var(--secondary-color)
-  }
-}
-
-.tip-calculator__result-name {
-  font-size: var(--font-size-small);
-}
-
-.tip-calculator__result-total {
-  font-size: var(--font-size-large);
-}
-
-
 .tip-calculator__currency-switch {
   display: flex;
   align-items: center;
@@ -338,6 +275,66 @@ export default {
 
 .tip-calculator__results--hidden {
   display: none;
+}
+
+.tip-calculator__tip-name,
+.tip-calculator__people-name {
+  font-size: var(--font-size-small);
+}
+
+.tip-calculator__tip-value,
+.tip-calculator__people-value {
+  font-size: var(--font-size-large);
+}
+
+.tip-tip-calculator__name-left,
+.tip-tip-calculator__name-right {
+  font-size: var(--font-size-small);
+}
+
+.tip-calculator__result-name {
+  font-size: var(--font-size-small);
+}
+
+.tip-calculator__result-total {
+  font-size: var(--font-size-large);
+}
+
+
+.tip-calculator__title h1 {
+  color: var(--secondary-color);
+  overflow: hidden;
+  font-size: 40px;
+  border-right: .15em solid var(--secondary-color);
+  white-space: nowrap;
+  margin: 0 auto;
+  top: 20px;
+  letter-spacing: .15em;
+  animation:
+    typing 1.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
+}
+
+@keyframes blink-caret {
+
+  from,
+  to {
+    border-color: transparent
+  }
+
+  50% {
+    border-color: var(--secondary-color)
+  }
 }
 
 .tip-calculator__button-container {
